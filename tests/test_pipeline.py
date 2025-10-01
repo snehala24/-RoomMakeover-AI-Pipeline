@@ -15,9 +15,9 @@ result = image_to_makeover(image_path, budget, style)
 print("\n🧩 Room Description:")
 print(result.get("room_description", "N/A"))
 
-if result.get("llm_response", {}).get("status") == "success":
+if result.get("status") == "success":
     print("\n🎨 Gemini Decor Suggestion:")
-    print(result["llm_response"]["raw_output"])
+    print(result.get("llm_response", "No response"))
 else:
     print("\n❌ Error:")
-    print(result.get("llm_response", {}).get("message") or result.get("message"))
+    print(result.get("message", "Unknown error"))

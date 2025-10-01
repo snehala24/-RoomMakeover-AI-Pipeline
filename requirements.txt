@@ -15,6 +15,7 @@ streamlit
 fastapi
 uvicorn
 python-multipart
+flask
 
 # Scraping (optional)
 serpapi
